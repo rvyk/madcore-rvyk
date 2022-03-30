@@ -86,12 +86,12 @@ th{
     color: white;
     font-size: 30px;
     padding: 10px;
-    border:3px solid#1d1f25;
+    border:3px solid white;
     border-radius: 15px;
     display: inline-block;
 }
 .banner i.aktywny{
-    background-color: #1d1f2583;
+    background-color: #00000052;
 }
 .topka1, .topka2, .topka3{
     width: 900px;
