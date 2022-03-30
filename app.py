@@ -19,7 +19,10 @@ def main():
         return redirect(url_for('user', usr=user))
     else:
         return render_template('strona-glowna.html')
-    
+
+@app.route('/voucher', methods=['POST', 'GET'])
+def voucher():
+    return render_template('voucher.html')
 @app.route('/topki', methods=['GET', 'POST'])
 def topki():
     if request.method == 'POST':
