@@ -1,0 +1,51 @@
+.click{
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  font-size: 15px;
+  text-decoration: none;
+  left: 50px;
+  bottom: 50px;
+  position: fixed;
+  color: #362C28;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 15px;
+  display: none;
+}
+.click p{
+  margin-left: 3px;
+  display: inline-block;
+}
+.click i{
+  margin-top: 4px;
+  display: inline-block;
+}
+table{
+  border-collapse: collapse;
+  text-align: left;
+  margin-right: 10px;
+  color: white;
+  padding: 10px;
+}
+td {
+  margin-left: 20px;
+  padding: 3px;
+  border-bottom: 1px solid #362C28;
+  font-weight: 100;
+}
+td.dark{
+  border-bottom: 1px solid #F3C969;
+}
+th{
+  padding: 0px 10px;
+  font-weight: 300;
+  border-right: 1px solid #362C28;
+  border-bottom: 1px solid #362C28;
+}
+th.dark{
+  border-right: 1px solid #F3C969;
+  border-bottom: 1px solid #F3C969;
+}
+.liczba {
+  margin-left: 20px;
+}

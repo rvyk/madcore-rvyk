@@ -1,0 +1,5 @@
+<ul>
+    {% for row in players %} 
+    <li onClick="fill('{{row.lastNickname}}')">{{row.lastNickname}}</li>
+    {% endfor %}
+</ul>

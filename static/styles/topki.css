@@ -1,0 +1,147 @@
+table{
+    border-collapse: collapse;
+    text-align: left;
+    color: #362C28;
+    width: 100%;
+  }
+td {
+    width: 300px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+th{
+    color: white;
+    text-align: center;
+}
+.kratka{
+    background-color: #e7b235;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    width: 400px;
+    color: #362C28;
+    transition: 0.2s linear;
+
+}
+.kratka img{
+    width: 26px;
+    float: left;
+    border-radius: 5px;
+}
+.kratka.dark{
+    background-color: #1d1f25;
+    color: #fff;
+}
+.kratkavalue{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    background-color: #e7b235;
+    text-align: center;
+    border-radius: 10px;
+    width: 100px;
+    color: #362C28;
+    font-weight: 400;
+    transition: 0.2s linear;
+
+}
+.kratkavalue.dark{
+    background-color: #1d1f25;
+    color: #fff;
+}
+.index{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    padding-left: 10px;
+    text-align: center;
+}
+.topname{
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    background-color: #e7b235;
+    border-radius: 10px;
+    transition: 0.2s linear;
+}
+.topname.dark{
+    background-color: #1d1f25;
+}
+.scrollup {
+    font-size: 50px;
+    text-decoration: none;
+    right: 50px;
+    bottom: 50px;
+    position: fixed;
+    color: #362C28;
+    display: none;
+  }
+.scrollup.dark{
+    color: #fff;
+}
+.banner i{
+    margin: 4px 0px 8px 0px;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    border:3px solid#1d1f25;
+    border-radius: 15px;
+    display: inline-block;
+}
+.banner i.aktywny{
+    background-color: #1d1f2583;
+}
+.topka1, .topka2, .topka3{
+    width: 900px;
+    text-align: center;
+    height: 550px;
+    background-color: #facf6a;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    clear: both;
+    transition: 0.2s linear;
+}
+.topka1.dark, .topka2.dark, .topka3.dark{
+    background-color: #292C35;
+}
+.topka1.schowany, .topka2.schowany, .topka3.schowany{
+    display: none;
+}
+.banner{
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    flex-direction: column-reverse;
+}
+@media (max-width: 991px)
+{
+    .topka1{
+        width: 80%;
+        margin-top: 150px;
+    }
+    td{
+        width: 150px;
+    }
+    .kratka{
+        width: 80%;
+    }
+}
+@media (max-width: 600px) {
+    .topka1{
+        width: 350px;
+        margin-top: 150px;
+        height: 600px;
+    }
+    .kratka img{
+        float: left;
+    }
+    .kratka{
+        width: 130px;
+    }
+
+}

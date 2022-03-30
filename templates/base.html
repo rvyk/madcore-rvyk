@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!-- ikonka strony -->
+    <link rel="icon" href="{{ url_for('static', filename='img/round-logo.png')}}">
+    {%block addons%}
+    {%endblock%}
+
+    <!-- style css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/scroll-bar.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- scripts -->
+    <script src="{{ url_for('static', filename='js/jquery.scrollTo.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/theme.js')}}"></script>
+    <script>
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            enableDarkMode();          
+        }
+      </script>
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <script>
+        function suggest(inputString){
+            if(inputString.length == 0) {
+                $('#suggestions').fadeOut();
+            } else {
+                $('#player').addClass('load');
+                $.post("/ajaxpost", {queryString: ""+inputString+""}, function(data){
+                        $('#suggestions').fadeIn();
+                        $('#suggestionsList').html(data); 
+                        $('#suggestionsList').append(data.htmlresponse);
+                        $('#player').removeClass('load');
+                });
+          }
+        }
+        function fill(thisValue) {
+        if(thisValue == undefined) {
+            return false;
+        }
+          var url = window.location.protocol + "//" + window.location.host + "/profil/" + thisValue;
+          window.open(url, '_self')
+          setTimeout("$('#suggestions').fadeOut();", 600);
+        }
+        </script>
+        <header>
+            <a href="/" class="header-logo">MADCORE.PL</a>
+            <ul class="header-navigation">
+                <li><a href="/">DOM</a></li>
+                <li><a href="/topki">TOPKI</a></li>
+                <li><a href="/regulamin">REGULAMIN</a></li>
+                <li><a href="/sklep">SKLEP</a></li>
+                <li><a href="/voucher">ZREALIZUJ VOUCHER</a></li>
+            </ul>
+            <div class="header-search">
+                <form method="post" action="#" id="form">
+                    <input autocomplete="off" id="player" type="text" name="nm" placeholder="Wyszukaj gracza" onkeyup="suggest(this.value);" onblur="fill();">
+                    <div class="suggestionsBox" id="suggestions">
+                        <div class="suggestionList" id="suggestionsList">   </div>
+                    </div>
+                </form>
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+    
+        </header>
+    {%block content%}
+    {% endblock %}
+    <section class="footer">
+        <div class="social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://dc.madcore.pl"><i class="fab fa-discord"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+
+        <ul class="list">
+            <li>
+                <a href="/">Dom</a>
+            </li>
+            <li>
+                <a href="https://dc.madcore.pl">Discord</a>
+            </li>
+            <li>
+                <a href="#">O nas</a>
+            </li>
+            <li>
+                <a href="/regulamin">Regulamin</a>
+            </li>
+            <li>
+                <a class="theme" href="javascript:void(0)">Zmień motyw</a>
+            </li>
+        </ul>
+        
+        <p class="copyright">
+            MADCORE.PL &copy; 2022
+        </p>
+    </section>
+</body>
+</html>
