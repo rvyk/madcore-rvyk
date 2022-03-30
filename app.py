@@ -22,6 +22,9 @@ def main():
 
 @app.route('/voucher', methods=['POST', 'GET'])
 def voucher():
+    if request.method == 'POST':
+        user = request.form['nm']
+        return redirect(url_for('user', usr=user))
     return render_template('voucher.html')
 @app.route('/topki', methods=['GET', 'POST'])
 def topki():
