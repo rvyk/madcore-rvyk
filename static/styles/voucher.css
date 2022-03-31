@@ -12,8 +12,14 @@
     height: 40px;
     border-radius: 15px;
     margin: 5px;
-    caret-color: transparent;
     text-align: center;
+}
+.adnotatka{
+    font-size: 13px !important;
+}
+.errormsg{
+    font-size: 20px !important;
+    color: red !important; 
 }
 input::placeholder{
     font-family:Arial, FontAwesome;

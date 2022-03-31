@@ -23,10 +23,20 @@ MADCORE.PL
             <h1>VOUCHER</h1>
             <div class="voucher">
                 <form action="" method="POST">
-                    <input type="text" name="username" autocomplete="off" placeholder="&#xf406; | Wprowadź nick"/>
-                    <input type="text" name="vouchercode" autocomplete="off" placeholder="&#xf121; | Wprowadź kod"/>
+                    <input type="text" required="on" name="username" autocomplete="off" placeholder="&#xf406; | Wprowadź nick"/>
+                    <input type="text" required="on" name="vouchercode" autocomplete="off" placeholder="&#xf121; | Wprowadź kod"/>
                     <input type="submit" value="Użyj">
+                    <p class="adnotatka">Upewnij się kilka razy, że nick który wpisałeś jest <b>prawidłowy</b>,<br /> ponieważ nie jest on sprawdzany podczas realizacji vouchera.
                 </form>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for msg in messages %}
+                        <p class="errormsg">{{msg}}</p>
+                        {%endfor%}
+                    {%endif%}
+                {%endwith%}
+
+
             </div>
         </div>
     </div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

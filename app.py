@@ -1,17 +1,19 @@
 import re
-from flask import Flask, redirect, render_template, request, url_for, jsonify
+from flask import Flask, redirect, render_template, request, url_for, jsonify, flash
 from flask_mysqldb import MySQL, MySQLdb
 from handlers import errors
 import time
+from mcrcon import MCRcon
 import datetime
 app = Flask(__name__)
+app.secret_key = "!d\_U1<;+*vR@S;pMN0u"
 app.register_blueprint(errors)
 app.config['MYSQL_HOST'] = '34.116.255.40'
 app.config['MYSQL_USER'] = 'rvyk'
 app.config['MYSQL_PASSWORD'] = 'skala234'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)
-
+mcr = MCRcon("34.116.255.40", "skala234")
 @app.route('/'  , methods=['GET', 'POST'])
 def main():
     if request.method == 'POST':
@@ -22,10 +24,41 @@ def main():
 
 @app.route('/voucher', methods=['POST', 'GET'])
 def voucher():
-    if request.method == 'POST':
+    if request.method == 'POST' and "nm" in request.form:
         user = request.form['nm']
         return redirect(url_for('user', usr=user))
+    if request.method == 'POST' and 'username' and 'vouchercode' in request.form:
+        username = request.form['username']
+        vouchercode = request.form['vouchercode']
+        print('username', username)
+        print('voucher code', vouchercode)
+        cur = mysql.connection.cursor()
+        cur.execute("USE voucher")
+        cur.execute(f"SELECT usluga FROM vouchers WHERE voucher_code='{vouchercode}'")
+        voucherCur = cur.fetchone()
+        numrows = int(cur.rowcount)
+        if numrows == 0:
+            flash("Ten voucher nie istnieje", "info")
+            cur.close()
+        else:
+            try:
+                usluga = voucherCur.get("usluga")
+                mcr.connect()
+                mcr.command(f"lp user {username} parent set {usluga}")
+                mcr.disconnect()
+                print("to sie nie wykona")
+                cur.execute(f"DELETE FROM vouchers WHERE voucher_code='{vouchercode}'")
+                mysql.connection.commit()
+                cur.close()
+                flash(f"Voucher został zrealizowany na nick: {username}", "info")
+            except:
+                flash(f"Serwer jest wyłączony", "info")
+                mysql.connection.commit()
+                cur.close()
+
+        return redirect(url_for('voucher'))
     return render_template('voucher.html')
+
 @app.route('/topki', methods=['GET', 'POST'])
 def topki():
     if request.method == 'POST':
