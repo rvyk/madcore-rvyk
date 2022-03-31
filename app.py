@@ -46,7 +46,6 @@ def voucher():
                 mcr.connect()
                 mcr.command(f"lp user {username} parent set {usluga}")
                 mcr.disconnect()
-                print("to sie nie wykona")
                 cur.execute(f"DELETE FROM vouchers WHERE voucher_code='{vouchercode}'")
                 mysql.connection.commit()
                 cur.close()
