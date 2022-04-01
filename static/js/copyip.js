@@ -4,7 +4,7 @@ function kopiuj(){
     $(".click").delay(1000).fadeOut("slow");
 }
 function kopiujdsc(){
-    navigator.clipboard.writeText('dc.madcore.pl')
+    navigator.clipboard.writeText('#')
     $(".click").fadeIn("slow");
     $(".click").delay(1000).fadeOut("slow");
 }
