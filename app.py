@@ -336,6 +336,9 @@ def statystykipage(usr):
 
 @app.route('/sklep', methods=['GET', 'POST'])
 def sklep():
+    if request.method == 'POST':
+        user = request.form['nm']
+        return redirect(url_for('user', usr=user))
     return render_template('sklep.html')
 if __name__ == '__main__':
     app.run()
