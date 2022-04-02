@@ -13,7 +13,12 @@
     border-radius: 15px;
     margin: 5px;
     text-align: center;
+    border: 0;
+    outline: 0;
 }
+.voucher input:focus::placeholder {
+    color: transparent;
+  }
 .adnotatka{
     font-size: 13px !important;
 }
@@ -26,6 +31,9 @@ input::placeholder{
     text-align: center;
     color: rgb(0, 0, 0);
     letter-spacing: .1em;
+}
+.voucher input:hover{
+    background-color: rgb(218, 218, 218);
 }
 .voucher input:focus{
     outline: none;
