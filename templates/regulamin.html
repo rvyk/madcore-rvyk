@@ -7,8 +7,10 @@ Discord: rvyk#4848
 
 {%block addons%}
 <script src="{{ url_for('static', filename='js/scrollup.js')}}"></script>
+<script src="{{ url_for('static', filename='js/regulamin.js')}}"></script>
 <link rel="stylesheet" href="{{ url_for('static', filename='styles/navigation-bar.css')}}">
 <link rel="stylesheet" href="{{ url_for('static', filename='styles/footer.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/regulamin.css')}}">
 {%endblock%}
 
 {% block title %}
@@ -18,7 +20,94 @@ MADCORE.PL
 {% block content %}
     <a href="#" class="scrollup"><i class="fa-solid fa-circle-arrow-up"></i></a>
     <div class="banner">
-    
+      <div class="wybor">
+        <a href="javascript:void(0)" onclick="minecraft()"><i class="fa-solid fa-cube minecraft aktywny"></i></a>
+        <a href="javascript:void(0)" onclick="discord()"><i class="fa-brands fa-discord discord"></i></a>
+        <a href="javascript:void(0)" onclick="platnosci()"><i class="fa-solid fa-pencil platnosci"></i></a>
+      </div>
+      <div class="regulamin regulamin-discord turnoff">
+        <h1>Regulamin discord</h1>
+        <h2>§1. Ogólne zasady</h2>
+        <p>1.1. Wchodząc na serwer discord, akceptujesz nasz regulamin.</p>
+        <p>1.2. Nieznajomość regulaminu nie zwalnia Cię z jego przestrzegania.</p>
+        <p>1.3. Wszystkich administratorów i użytkowników obowiązuje kultura osobista.</p>
+        <p>1.4. Skargi, odwołania od bana oraz błędy trzeba zgłaszać na odpowiednich kanałach.</p>
+        <p>1.5. Zakaz wszelkiego rodzaju spamowania.</p>
+        <p>1.6. Zakaz używania modulatora głosu.</p>
+        <p>1.7. Zakaz krzyczenia/piszczenia do mikrofonu.</p>
+        <p>1.8. Zakaz nagrywania głosu i publikacji jakiejkolwiek zawartości tego typu publicznie.</p>
+        <p>1.9. Zakaz używania prefiksów z nazwą rang.</p>
+        <p>1.10. Działania mające na celu zaszkodzenie serwerowi są zabronione.</p>
+        <h2>§2. Użytkownicy</h2>
+        <p>2.1. Zakaz wszelkiego rodzaju obrażania innych użytkowników.</p>
+        <p>2.2. Zakaz używania nicków, awatarów, nazw kanałów i opisów które są wulgarne, rasistowskie, propagują nazizm, nienawiść i nietolerancję lub obrażają innych użytkowników.</p>
+        <p>2.3. Zakaz podszywania się pod administrację.</p>
+        <p>2.4. Zakaz bezzasadnego wchodzenia na kanały pomocy.</p>
+        <p>2.5. Zakaz reklamowania wszelkich treści niezwiązanych z siecią serwerów MADCORE.PL.</p>
+        <p>2.6. Zakaz puszczania muzyki na kanałach administracji/publicznych.</p>
+        <p>2.7. Zakaz udostępniania i rozpowszechniania danych osobowych/zdjęć administracji/użytkowników.</p>
+        <p>2.8. Zakaz publikowania jakichkolwiek treści 18+ .</p>
+        <p>2.9. Zakaz oznaczania administracji bez powodu.</p>
+        <p>2.10. Zakaz pisania rzeczy niezgodnych z tematyką kanału.</p>
+        <h2>§3. Administracja</h2>
+        <p>3.1. Każdy administrator ma obowiązek udzielić pomocy użytkownikowi, jeśli ten jej potrzebuje.</p>
+        <p>3.2. Administracja musi zachować bezstronność.</p>
+        <p>3.3. Administrator ma prawo do kickowania lub banowania użytkowników nieprzestrzegających regulaminu.</p>
+        <p>3.4. Administrator ma prawo wejść na kanał prywatny bez zgody użytkownika.</p>
+        <p>3.5. Administrator musi posiadać nick zgodny z nickiem na serwerze minecraft.</p>
+        <p>3.6. Administrator powinien dawać dobry przykład użytkownikom.</p>
+      </div>
+      <div class="regulamin regulamin-minecraft">
+        <h1>Regulamin minecraft</h1>
+        <h2>§1. Ogólne zasady</h2>
+        <p>1.1. Każdy Gracz zarejestrowany na serwerze ma obowiązek przestrzegania regulaminów.</p>
+        <p>1.2. Każda zarejestrowana, nie łamiąca regulaminu osoba ma prawo do gry na naszym serwerze oraz korzystania z funkcji znajdujących się na nim.</p>
+        <p>1.3. Wszystkie błędy gry należy zgłaszać członkom Administracji.</p>
+        <p>1.4. Zabrania się używania modów/programów/tekstur które w znacznym stopniu ułatwiają rozgrywkę.</p>
+        <p>1.5. Administracja ma prawo karać za czyny nie uwzględnione w regulaminie, które działają na szkodę serwera.</p>
+        <p>1.6. Nieznajomość regulaminu nie zwalnia z jego przestrzegania.</p>
+        <p>1.7. Obowiązują ogólnie pojęta zasada dobrego wychowania, ograniczonego zaufania, netykiety i normy socjalne.</p>
+        <h2>§2. Regulamin gry</h2>
+        <p>2.1. Zakaz przeklinania oraz ubliżania innym graczom.</p>
+        <p>2.2. Zakaz spamowania.</p>
+        <p>2.3. Zakaz reklamowania innych serwerów (przykładowo, podawanie adresów IP, nazw itp.).</p>
+        <p>2.4. Zakaz używania cheatów oraz modyfikacji na serwerze. (optifine, Rei minimap itd. są dozwolone).</p>
+        <p>2.5. Zakaz wykorzystywania bugów gry.</p>
+        <p>2.6. Handel z graczami odbywa się na własne ryzyko.</p>
+        <p>2.7. Zakaz podawania się za członka administracji serwera oraz powoływania się na znajomości przez nieuprawnionych graczy.).</p>
+        <p>2.8. Zakazane są: nękanie innych graczy oraz groźby nie związane z grą.</p>
+        <p>2.9. Zakaz pisania nagminnych próśb do administracji o itemy, teleportacje do innych graczy.</p>
+        <p>2.10. Zakaz nadużywania dużych liter (Caps Lock).</p>
+        <h2>§3. Obowiązki</h2>
+        <p>3.1. Każdy kto widzi osobę łamiącą/nadużywającą regulamin ma obowiązek zgłoszenia tego w skardze na forum lub pisząc do członka administracji w trakcie gry.</p>
+        <p>3.2. Każdy gracz wiedzący o istnieniu błędu gry/pluginu ma obowiązek zgłosić to natychmiast do członka administracji w grze lub na discord, ZAWSZE poprzez otworzenie ticketu na serwerze discord lub poprzez dołączenie na kanał głosowy POMOC MINECRAFT.</p>
+        <p>3.3. Każdy gracz ma obowiązek wykonywać polecenia administracji.</p>
+        <p>3.4. Obowiązkiem każdego jest przestrzeganie regulaminu.</p>
+        <p>3.5. Każdy gracz może korzystać z jednego konta (multikonta będą banowane).</p>
+        <h2>§4. Postanowienia końcowe</h2>
+        <p>4.1. Prośby oraz Skargi mogą zostać odrzucone bez podania powodu.</p>
+        <p>4.2. Zakaz propagowania faszyzmu, rasizmu oraz treści erotycznych.</p>
+        <p>4.3. Każdy członek administracji ma prawo do usunięcia budowli niecenzuralnych (np.: swastyka).</p>
+        <p>4.4. Nie zastosowanie się do regulaminu skutkuje wydaleniem osobnika z serwera na czas bliżej nieokreślony.</p>
+        <p>4.5. Wszystkie kary wymierzane są według taryfikatora.</p>
+      </div>
+      <div class="regulamin regulamin-platnosci turnoff">
+        <h1>Regulamin płatności</h1>
+        <h2>§1. Organizator płatności</h2>
+        <p>1.1. Dostępnymi formami płatności w serwisie są: PaySafeCard, PayPal, Przelew oraz Direct Billing.</p>
+        <p>1.2. Ceny usług mogą różnić się zależnie od wybranej formy płatności oraz mogą ulec zmianie.</p>
+        <p>1.3. Płatności PaySafeCard, PayPal i bankowe obsługiwane są przez firmę https://paybylink.pl/.</p>
+        <p>1.4. Płatności DirectBilling obsługiwane są przez firmę https://hotpay.pl/.</p>
+        <p>1.5. Po zakupie wybranej usługi serwis madcore.pl automatycznie przyznaje ją klientowi.</p>
+        <p>1.6. Wszelkie usługi oraz przedmioty, są własnością serwera madcore.pl, a gracz jedynie otrzymuje do nich dostęp.</p>
+        <p>1.7. W przypadku upadku serwera, bądź tzw. "Nowej edycji" wszelkie wirtualne przedmioty, dostęp do w/w usług jednorazowych zostaje zablokowany.</p>
+        <p>1.8. Po zakupie usługi w sklepie, zwrotów nie przyjmujemy.</p>
+        <p>1.9. Wszelkie reklamacje dotyczące płatności prosimy kierować na e-mail: madcore-platnosci@madcore.pl</p>
+        <h2>PRZEDSIĘBIORCA: xyz</h2>
+        <h2>NIP: 0000000000</h2>
+        <h2>REGON: 00000000000000</h2>
+        <h2>EMAIL: madcore-platnosci@madcore.pl</h2>
+      </div>
     </div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#e7b235" fill-opacity="1" d="M0,224L24,197.3C48,171,96,117,144,117.3C192,117,240,171,288,192C336,213,384,203,432,165.3C480,128,528,64,576,80C624,96,672,192,720,192C768,192,816,96,864,85.3C912,75,960,149,1008,192C1056,235,1104,245,1152,208C1200,171,1248,85,1296,74.7C1344,64,1392,128,1416,160L1440,192L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path>
       </svg>

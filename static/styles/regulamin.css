@@ -1,0 +1,115 @@
+.banner{
+    flex-direction: column !important;
+    padding: 90px 0px 0px 0px !important;
+}
+.regulamin h1{
+    margin-top: 5px;
+    background-color: #d4d4d4;
+    border-radius: 15px;
+    font-weight: 400;
+}
+
+.regulamin h2{
+    font-weight: 300;
+    margin-top: 30px;
+}
+.regulamin p{
+    margin: 3px 0px 0px 10px;
+    text-align: left;
+}
+.regulamin {
+    -moz-box-shadow: 0 0 8px rgb(0, 0, 0);
+    -webkit-box-shadow: 0 0 8px rgb(0, 0, 0);
+    box-shadow: 0 0 8px rgb(0, 0, 0);
+    width: 600px;
+    text-align: center;
+    height: 550px;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    transition: 0.2s linear;
+    animation: 1s ease-out 0s 1 slideInLeft;
+    transition: all 1s;
+}
+.regulamin-discord{
+    height: 1300px;
+
+}
+.regulamin-minecraft{
+    height: 1550px;
+}
+.regulamin-platnosci{
+    height: 880px;
+}
+.turnoff {
+    display: none;
+}
+.banner i{
+    display: inline-block !important;
+    background-color: #fff;
+    clear: both;
+    margin: 4px 0px 8px 0px;
+    color: rgba(0, 0, 0, 0.726);
+    font-size: 30px;
+    padding: 10px;
+    border:3px solid white;
+    border-radius: 15px;
+    -moz-box-shadow: 0 0 8px rgb(0, 0, 0);
+    -webkit-box-shadow: 0 0 8px rgb(0, 0, 0);
+    box-shadow: 0 0 8px rgb(0, 0, 0);
+    animation: 1s ease-out 0s 1 slideInLeft;
+}
+.wybor{
+    display: inline-block;
+    text-align: center;
+}
+.banner i.aktywny{
+    background-color: #ffffff73;
+}
+@media (max-width: 991px)
+{
+    .banner {
+        padding: 140px 0px 0px 0px !important;
+        flex-direction: column !important;
+    }
+    .regulamin-discord{
+        height: 1400px;
+        width: 500px;
+        transition: all 1s;
+    }
+    .regulamin-platnosci{
+        height: 900px;
+        width: 500px;
+        transition: all 1s;
+    }
+    .regulamin-minecraft{
+        height: 1750px;
+        width: 500px;
+        transition: all 1s;
+    }
+
+}
+@media (max-width: 600px) {
+    .banner {
+        flex-direction: column !important;
+        padding: 160px 0px 0px 0px !important;
+    }
+    .regulamin-discord{
+        height: 2150px;
+        width: 300px;
+        transition: all 1s;
+    }
+    .regulamin-platnosci{
+        height: 1300px;
+        width: 300px;
+        transition: all 1s;
+    }
+    .regulamin-minecraft{
+        height: 2570px;
+        width: 300px;
+        transition: all 1s;
+    }
+}

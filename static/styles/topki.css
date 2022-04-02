@@ -22,7 +22,7 @@ th{
 }
 
 .kratka{
-    background-color: #e7b235;
+    background-color: #d4d4d4;
     text-align: center;
     border-radius: 10px;
     padding: 5px;
@@ -37,14 +37,14 @@ th{
     border-radius: 5px;
 }
 .kratka.dark{
-    background-color: #1d1f25;
-    color: #fff;
+    background-color: #d4d4d4;
+    color: rgb(0, 0, 0);
 }
 .kratkavalue{
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
-    background-color: #e7b235;
+    background-color: #d4d4d4;
     text-align: center;
     border-radius: 10px;
     width: 100px;
@@ -54,28 +54,30 @@ th{
 
 }
 .kratkavalue.dark{
-    background-color: #1d1f25;
-    color: #fff;
+    background-color: #d4d4d4;
+    color: rgb(0, 0, 0);
 }
 .index{
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 400;
     padding-left: 10px;
     text-align: center;
     
 }
 .topname{
-    color: #fff;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
     text-align: center;
     width: 100%;
-    background-color: #e7b235;
-    border-radius: 10px;
+    background-color: #d4d4d4;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     transition: 0.2s linear;
     
 }
 .topname.dark{
-    background-color: #1d1f25;
+    background-color: #d4d4d4;
 }
 .scrollup {
     font-size: 50px;
@@ -90,9 +92,9 @@ th{
     color: #fff;
 }
 .banner i{
-    
+    background-color: white;
     margin: 4px 0px 8px 0px;
-    color: white;
+    color: rgba(0, 0, 0, 0.726);
     font-size: 30px;
     padding: 10px;
     border:3px solid white;
@@ -109,10 +111,10 @@ th{
     -moz-box-shadow: 0 0 8px rgb(0, 0, 0);
     -webkit-box-shadow: 0 0 8px rgb(0, 0, 0);
     box-shadow: 0 0 8px rgb(0, 0, 0);
-    width: 900px;
+    width: 600px;
     text-align: center;
     height: 550px;
-    background-color: #facf6a;
+    background-color: #fff;
     border: 2px solid #fff;
     border-radius: 15px;
     margin-left: auto;
@@ -122,7 +124,7 @@ th{
     animation: 1s ease-out 0s 1 slideInLeft;
 }
 .topka1.dark, .topka2.dark, .topka3.dark{
-    background-color: #292C35;
+    background-color: #ffffff;
 }
 .topka1.schowany, .topka2.schowany, .topka3.schowany{
     display: none;

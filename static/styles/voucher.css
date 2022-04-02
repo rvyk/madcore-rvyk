@@ -50,6 +50,7 @@ input::placeholder{
 
 .voucher input[type=submit]:hover{
     background-color: rgb(218, 218, 218);
+    cursor: pointer;
 }
 .banner{
     flex-direction: column !important;

@@ -46,6 +46,7 @@ header .header-logo{
     color: #fff;
     text-decoration: none;
     font-weight: 600;
+    animation: 1s ease-out 0s 1 slideInLeft;
 }
 header .header-navigation{
     display: flex;
@@ -68,13 +69,14 @@ header .header-navigation li a {
     font-size: 12px;
 }
 header .header-navigation li a:hover{
-    color: #362C28;
+    color: #9c9c9c;
 }
 header .header-search{
     position: relative;
     width: 300px;
     height: 40px;
     justify-content: center;
+    animation: 1.5s ease-out 0s 1 slideInLeft;
 }
 header .header-search input {
     position: absolute;
@@ -151,7 +153,7 @@ header .header-search .fa-search{
     border-radius: 50%;
     max-width: 400px;
     margin-left: 50px;
-    animation: 1s ease-out 0s 1 opacityChange;
+    animation: 3s ease-out 0s 1 opacityChange;
     -moz-box-shadow: 0 0 8px rgb(0, 0, 0);
     -webkit-box-shadow: 0 0 8px rgb(0, 0, 0);
     box-shadow: 0 0 8px rgb(0, 0, 0);
@@ -280,7 +282,21 @@ path.dark{
         opacity: 0%;
         transform: translateX(-100%);
     }
-    25%{
+    75%{
+        opacity: 0%;
+
+    }
+    100% {
+        opacity: 100%;
+        transform: translateX(0);
+    }
+  }
+  @keyframes slideInRight {
+    0% {
+        opacity: 0%;
+        transform: translateX(100%);
+    }
+    75%{
         opacity: 0%;
 
     }
