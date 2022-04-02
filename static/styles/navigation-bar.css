@@ -92,6 +92,9 @@ header .header-search input {
 header .header-search input::placeholder{
     color: #fff;
 }
+header .header-search input:focus::placeholder {
+    color: transparent;
+  }
 header .header-search .fa-search{
     position: absolute;
     top: 50%;
