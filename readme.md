@@ -1,4 +1,4 @@
-Przed uruchomieniem zmień dane do bazy danych oraz rcon'a serwera.
+Przed uruchomieniem zmień dane do bazy danych oraz rcon'a serwera. (plik config.yaml)
 W razie jakiś problemów skontaktuj się ze mną: rvyk#4848 
 WYMAGANE PLUGINY DO ZBIERANIA STATYSTYK GRACZY:
 - LUCKPERMS (połączony z bazą danych)
