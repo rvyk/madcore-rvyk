@@ -24,11 +24,17 @@ MADCORE.PL
         <i class="fa-solid fa-circle-check"></i><p>Skopiowano adres serwera!</p>
     </div>
     <div class="banner">
-        <div class="content">
+        <div class="content info1">
             <h2>MADCORE.PL</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer venenatis vestibulum urna. Nulla facilisi. Duis varius posuere lectus tempor vestibulum. Vivamus nec dictum diam. Curabitur vitae gravida nisl. In aliquam sollicitudin arcu, a vehicula metus lacinia at. Praesent et dolor at sem bibendum ultrices. Praesent ut nisl ipsum. Morbi sodales bibendum nisi ac ornare. Morbi nec sem nunc. Ut in fringilla nibh. Praesent a congue tellus. In quis nunc eu massa eleifend vulputate ac in purus. Vestibulum et congue enim, eu imperdiet lorem.</p>
             <a href="javascript:void(0);" onclick="infoopen()" class="more">Dowiedz się więcej</a>
             <a href="javascript:void(0);" onclick="kopiuj()" class="adres">Skopiuj adres serwera</a>
+        </div>
+        <div class="content hide info2">
+            <h2>DISCORD</h2>
+            <p>Żeby dowiedzieć się więcej, dołącz do nas na serwer discord.</p>
+            <a href="javascript:void(0);" onclick="infoclose()" class="more">Pokaż ogólne</a>
+            <a href="javascript:void(0);" onclick="kopiujdsc()" class="adres">Skopiuj adres discorda</a>
         </div>
         <img src="{{ url_for('static', filename='img/round-logo-trans.png')}}" class="image">
 

@@ -19,6 +19,7 @@ th{
 .banner {
     min-height: auto !important;
     padding-top: 90px !important;
+    flex-direction: column !important;
 }
 
 .kratka{
@@ -71,8 +72,7 @@ th{
     text-align: center;
     width: 100%;
     background-color: #d4d4d4;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-radius: 15px;
     transition: 0.2s linear;
     
 }
@@ -92,20 +92,28 @@ th{
     color: #fff;
 }
 .banner i{
-    background-color: white;
+    display: inline-block !important;
+    background-color: #fff;
+    clear: both;
     margin: 4px 0px 8px 0px;
     color: rgba(0, 0, 0, 0.726);
     font-size: 30px;
     padding: 10px;
     border:3px solid white;
     border-radius: 15px;
-    display: inline-block;
     -moz-box-shadow: 0 0 8px rgb(0, 0, 0);
     -webkit-box-shadow: 0 0 8px rgb(0, 0, 0);
     box-shadow: 0 0 8px rgb(0, 0, 0);
+    animation: 1s ease-out 0s 1 slideInLeft;
+}
+
+.wybor{
+    display: inline-block;
+    animation: 1s ease-out 0s 1 slideInLeft;
+    text-align: center;
 }
 .banner i.aktywny{
-    background-color: #00000052;
+    background-color: #ffffff73;
 }
 .topka1, .topka2, .topka3{
     -moz-box-shadow: 0 0 8px rgb(0, 0, 0);
