@@ -14,6 +14,7 @@ td {
 th{
     color: white;
     text-align: center;
+    
 }
 .banner {
     min-height: auto !important;
@@ -62,6 +63,7 @@ th{
     font-weight: 600;
     padding-left: 10px;
     text-align: center;
+    
 }
 .topname{
     color: #fff;
@@ -70,6 +72,7 @@ th{
     background-color: #e7b235;
     border-radius: 10px;
     transition: 0.2s linear;
+    
 }
 .topname.dark{
     background-color: #1d1f25;
@@ -95,11 +98,17 @@ th{
     border:3px solid white;
     border-radius: 15px;
     display: inline-block;
+    -moz-box-shadow: 0 0 8px rgb(0, 0, 0);
+    -webkit-box-shadow: 0 0 8px rgb(0, 0, 0);
+    box-shadow: 0 0 8px rgb(0, 0, 0);
 }
 .banner i.aktywny{
     background-color: #00000052;
 }
 .topka1, .topka2, .topka3{
+    -moz-box-shadow: 0 0 8px rgb(0, 0, 0);
+    -webkit-box-shadow: 0 0 8px rgb(0, 0, 0);
+    box-shadow: 0 0 8px rgb(0, 0, 0);
     width: 900px;
     text-align: center;
     height: 550px;

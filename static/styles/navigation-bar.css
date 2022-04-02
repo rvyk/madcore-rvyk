@@ -33,6 +33,9 @@ header{
     font-family: 'Poppins', sans-serif;
     transition: 0.2s linear;
     animation: 1s ease-out 0s 1 slideInUp;
+    -moz-box-shadow: 0 0 8px rgb(0, 0, 0);
+    -webkit-box-shadow: 0 0 8px rgb(0, 0, 0);
+    box-shadow: 0 0 8px rgb(0, 0, 0);
 }
 header.dark{
     background: #1d1f25;
@@ -146,7 +149,9 @@ header .header-search .fa-search{
     max-width: 400px;
     margin-left: 50px;
     animation: 1s ease-out 0s 1 opacityChange;
-
+    -moz-box-shadow: 0 0 8px rgb(0, 0, 0);
+    -webkit-box-shadow: 0 0 8px rgb(0, 0, 0);
+    box-shadow: 0 0 8px rgb(0, 0, 0);
 }
 
 
@@ -232,6 +237,8 @@ header .header-search .fa-search{
 path{
     fill: #e7b235;
     transition: 0.2s linear;
+    filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.123));
+    
 }
 path.dark{
     fill: #292C35;
@@ -245,6 +252,7 @@ path.dark{
     color: #362C28;
     display: none;
     transition: 0.2s;
+    
   }
   .scrollup.dark{
     color: #fff;
