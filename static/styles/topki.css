@@ -15,6 +15,11 @@ th{
     color: white;
     text-align: center;
 }
+.banner {
+    min-height: auto !important;
+    padding-top: 90px !important;
+}
+
 .kratka{
     background-color: #e7b235;
     text-align: center;
@@ -82,6 +87,7 @@ th{
     color: #fff;
 }
 .banner i{
+    
     margin: 4px 0px 8px 0px;
     color: white;
     font-size: 30px;
@@ -102,9 +108,9 @@ th{
     border-radius: 15px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
     clear: both;
     transition: 0.2s linear;
+    animation: 1s ease-out 0s 1 slideInLeft;
 }
 .topka1.dark, .topka2.dark, .topka3.dark{
     background-color: #292C35;
@@ -114,15 +120,12 @@ th{
 }
 .banner{
     text-align: center;
-    margin: 0px;
-    padding: 0px;
     flex-direction: column-reverse;
 }
 @media (max-width: 991px)
 {
     .topka1, .topka2,.topka3{
         width: 80%;
-        margin-top: 150px;
     }
     td{
         width: 150px;
@@ -130,11 +133,17 @@ th{
     .kratka{
         width: 80%;
     }
+    .banner{
+        padding-top: 140px !important;
+        margin-top: 0px !important;
+        animation: all 1s;
+        min-height: auto !important;
+    }
+
 }
 @media (max-width: 600px) {
     .topka1, .topka2,.topka3{
-        width: 350px;
-        margin-top: 150px;
+        width: 320px;
         height: 600px;
     }
     .kratka img{
@@ -143,5 +152,10 @@ th{
     .kratka{
         width: 130px;
     }
-
+    .banner{
+        text-align: center;
+        padding-top: 160px !important;
+        animation: all 1s;
+        min-height: auto !important;
+    }
 }

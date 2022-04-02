@@ -57,6 +57,7 @@ table{
     .content{
         width: 80%;
         text-align: center;
+        
     }
     .banner .image{
         margin-left: 0;
@@ -89,7 +90,7 @@ table{
         top: 20%;
     }
     .banner{
-        height: 1200px !important;
+        height: 1400px !important;
     }
     .banner .image{
         margin-top: 10%;

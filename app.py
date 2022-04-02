@@ -1,19 +1,20 @@
-import re
 from flask import Flask, redirect, render_template, request, url_for, jsonify, flash
 from flask_mysqldb import MySQL, MySQLdb
 from handlers import errors
 import time
 from mcrcon import MCRcon
 import datetime
+import yaml
 app = Flask(__name__)
 app.secret_key = "!d\_U1<;+*vR@S;pMN0u"
 app.register_blueprint(errors)
-app.config['MYSQL_HOST'] = '34.116.255.40'
-app.config['MYSQL_USER'] = 'rvyk'
-app.config['MYSQL_PASSWORD'] = 'skala234'
-app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+cfg = yaml.load(open('config.yaml'))
+app.config['MYSQL_HOST'] = cfg['mysql_host']
+app.config['MYSQL_USER'] = cfg['mysql_user']
+app.config['MYSQL_PASSWORD'] = cfg['mysql_password']
+app.config['MYSQL_CURSORCLASS'] = cfg['mysql_cursorclass']
 mysql = MySQL(app)
-mcr = MCRcon("34.116.255.40", "skala234")
+mcr = MCRcon(cfg['rcon_ip'], cfg['rcon_password'])
 @app.route('/'  , methods=['GET', 'POST'])
 def main():
     if request.method == 'POST':
@@ -21,7 +22,6 @@ def main():
         return redirect(url_for('user', usr=user))
     else:
         return render_template('strona-glowna.html')
-
 @app.route('/voucher', methods=['POST', 'GET'])
 def voucher():
     if request.method == 'POST' and "nm" in request.form:
@@ -57,7 +57,6 @@ def voucher():
 
         return redirect(url_for('voucher'))
     return render_template('voucher.html')
-
 @app.route('/topki', methods=['GET', 'POST'])
 def topki():
     if request.method == 'POST':
@@ -77,7 +76,6 @@ def topki():
         return render_template('topki.html')
         
     return render_template('topki.html', topki=topki, topki3=topki3)
-
 @app.route("/ajaxpost",methods=["POST","GET"])
 def ajaxpost():
     cur = mysql.connection.cursor(MySQLdb.cursors.DictCursor)    
@@ -88,7 +86,6 @@ def ajaxpost():
         cur.execute(query)
         players = cur.fetchall()
     return jsonify({'htmlresponse': render_template('response.html', players=players)})
-
 @app.route('/regulamin')
 def regulamin():
     return render_template('regulamin.html')
@@ -336,5 +333,9 @@ def statystykipage(usr):
       items_droppedvalid=items_droppedvalid, items_picked_upvalid=items_picked_upvalid,
       distance_travelledvalid=distance_travelledvalid, eggs_thrownvalid=eggs_thrownvalid,
       entered_bedsvalid=entered_bedsvalid, joinsvalid=joinsvalid, xp_gainedvalid=xp_gainedvalid, skiny=skiny)
+
+@app.route('/sklep', methods=['GET', 'POST'])
+def sklep():
+    return render_template('sklep.html')
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()

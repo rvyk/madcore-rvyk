@@ -1,0 +1,82 @@
+.banner{
+    flex-direction: column !important;
+    padding-top: 80px !important;
+
+}
+
+.usluga{
+    border: 3px solid white;
+    border-radius: 15px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    width: 600px;
+    height: 300px;
+    margin: 10px;
+    position: relative;
+    background-color: white;
+    -moz-box-shadow: 0 0 8px rgb(0, 0, 0);
+    -webkit-box-shadow: 0 0 8px rgb(0, 0, 0);
+    box-shadow: 0 0 8px rgb(0, 0, 0);
+    transition: all 2s;
+    animation: 1s ease-out 0s 1 slideInLeft;
+}
+.usluga .tytul{
+    padding: 10px;
+    font-weight: 400;
+}
+.usluga .desc{
+    
+    font-weight: 300;
+    padding: 0px 10px 10px 10px;
+    color: rgba(0, 0, 0);
+}
+.usluga .kup{
+    position: relative;
+    margin: 0 auto;
+    float: right;
+    padding-top: 2px;
+    text-align: center;
+    color: white;
+    width: 80px;
+    height: 30px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 10px;
+    background-color: #26abff;
+    text-decoration: none;
+    transition: all 1s;
+}
+.usluga .kup:hover{
+    background-color: #099dff;
+}
+.usluga .rodzaje{
+    font-size: 20px;
+    padding: 15px;
+}
+.uslugi{
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+@media (max-width: 991px)
+{
+    .usluga{
+        width: 400px;
+        transition: all 1s;
+    }
+    .banner{
+        padding-top: 130px !important;
+        transition: all 1s;
+    }
+}
+@media (max-width: 600px) {
+    .usluga{
+        width: 300px;
+        height: 350px;
+        transition: all 1s;
+    }
+    .banner{
+        padding-top: 150px !important;
+        transition: all 1s;
+    }
+}
