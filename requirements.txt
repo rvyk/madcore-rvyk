@@ -11,3 +11,4 @@ mysql-connector-python==8.0.28
 mysqlclient==2.1.0
 pipwin==0.5.2
 SQLAlchemy==1.4.32
+PyYAML==5.4.1
