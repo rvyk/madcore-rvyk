@@ -49,3 +49,9 @@ th.dark{
 .liczba {
   margin-left: 20px;
 }
+.content h2{
+  text-shadow: 0 0 3px rgb(0, 0, 0);
+}
+.content p {
+  text-shadow: 0 0 2px rgb(0, 0, 0);
+}

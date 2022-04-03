@@ -4,6 +4,7 @@
 .content h1{
     letter-spacing: .2em;
     color: white;
+    text-shadow: 0 0 4px rgb(0, 0, 0);
 
 }
 .voucher input{
@@ -15,12 +16,16 @@
     text-align: center;
     border: 0;
     outline: 0;
+    -moz-box-shadow: 0 0 8px rgb(0, 0, 0);
+    -webkit-box-shadow: 0 0 8px rgb(0, 0, 0);
+    box-shadow: 0 0 8px rgb(0, 0, 0);
 }
 .voucher input:focus::placeholder {
     color: transparent;
   }
 .adnotatka{
     font-size: 13px !important;
+    text-shadow: 0 0 4px rgb(0, 0, 0);
 }
 .errormsg{
     font-size: 20px !important;

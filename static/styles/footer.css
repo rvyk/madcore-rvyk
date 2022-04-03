@@ -29,6 +29,7 @@
     margin: 0 8px;
     opacity: 0.75;
     transition: 0.2s linear;
+    text-shadow: 0 0 4px rgb(0, 0, 0);
 }
 .social a.dark{
     color: #fff;
@@ -53,6 +54,7 @@
     text-decoration: none;
     opacity: 0.8;
     transition: 0.2s linear;
+    text-shadow: 0 0 4px rgb(0, 0, 0);
 }
 .footer ul li a.dark{
     color: #fff;
@@ -73,6 +75,7 @@
     font-size: 13px;
     color: #aaa;
     transition: 0.2s linear;
+    text-shadow: 0 0 4px rgb(0, 0, 0);
 }
 .copyright.dark{
     color: #fff;

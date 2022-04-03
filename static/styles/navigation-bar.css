@@ -47,6 +47,7 @@ header .header-logo{
     text-decoration: none;
     font-weight: 600;
     animation: 1s ease-out 0s 1 slideInLeft;
+    text-shadow: 0 0 4px rgb(0, 0, 0);
 }
 header .header-navigation{
     display: flex;
@@ -67,6 +68,7 @@ header .header-navigation li a {
     letter-spacing: 1px;
     transition: 0.3s;
     font-size: 12px;
+    text-shadow: 0 0 4px rgb(0, 0, 0);
 }
 header .header-navigation li a:hover{
     color: #9c9c9c;
