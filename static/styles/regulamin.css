@@ -34,6 +34,7 @@
     transition: 0.2s linear;
     animation: 1s ease-out 0s 1 slideInLeft;
     transition: all 1s;
+    margin-bottom: 20px;
 }
 .regulamin-discord{
     height: 1300px;

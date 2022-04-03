@@ -19,6 +19,7 @@
     -moz-box-shadow: 0 0 8px rgb(0, 0, 0);
     -webkit-box-shadow: 0 0 8px rgb(0, 0, 0);
     box-shadow: 0 0 8px rgb(0, 0, 0);
+    transition: all 1s;
 }
 .voucher input:focus::placeholder {
     color: transparent;
@@ -38,9 +39,11 @@ input::placeholder{
     letter-spacing: .1em;
 }
 .voucher input:hover{
+    transition: all 1s;
     background-color: rgb(218, 218, 218);
 }
 .voucher input:focus{
+    transition: all 1s;
     outline: none;
     text-align: center;
 }

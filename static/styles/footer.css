@@ -18,7 +18,7 @@
 
 .footer .social a{
     font-size: 24px;
-    color: inherit;
+    color: #000;
     border: 1px solid #ccc;
     width: 40px;
     height: 40px;
@@ -27,11 +27,12 @@
     text-align: center;
     border-radius: 50%;
     margin: 0 8px;
-    opacity: 0.75;
     transition: 0.2s linear;
+    opacity: 0.8;
     text-shadow: 0 0 4px rgb(0, 0, 0);
 }
-.social a.dark{
+.footer .social a.dark{
+    text-shadow: 0 0 4px rgb(255, 255, 255);
     color: #fff;
 }
 
@@ -50,14 +51,15 @@
 }
 
 .footer ul li a{
-    color: #362C28;
+    color: #000000;
     text-decoration: none;
-    opacity: 0.8;
     transition: 0.2s linear;
-    text-shadow: 0 0 4px rgb(0, 0, 0);
+    opacity: 0.8;
+    text-shadow: 0 0 2px rgb(0, 0, 0);
 }
 .footer ul li a.dark{
     color: #fff;
+    text-shadow: 0 0 2px rgb(255, 255, 255);
 }
 
 .footer ul li {
@@ -75,9 +77,9 @@
     font-size: 13px;
     color: #aaa;
     transition: 0.2s linear;
-    text-shadow: 0 0 4px rgb(0, 0, 0);
 }
 .copyright.dark{
+    text-shadow: 0 0 4px rgb(0, 0, 0);
     color: #fff;
 }
 

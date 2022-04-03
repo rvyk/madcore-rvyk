@@ -1,6 +1,8 @@
 .banner{
     flex-direction: column-reverse;
     height: 900px !important;
+    margin-bottom: 50px !important;
+
 }
 .content{
     margin-left: auto;
@@ -35,6 +37,7 @@ table{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+
 }
 .nazwa_statystyki{
     padding-right: 10px;

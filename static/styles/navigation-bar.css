@@ -5,12 +5,17 @@
     box-sizing: border-box;
 }
 body{
-    background: #fff;
+    background-image: url("../img/bg-light.png");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     transition: background 0.2s linear;
 }
 
 body.dark{
-    background-color: #1d1f25;
+    background-image: url("../img/bg.png");
 }
 .moredsc{
     display: none;
@@ -35,9 +40,10 @@ header{
     animation: 1s ease-out 0s 1 slideInUp;
     -moz-box-shadow: 0 0 8px rgb(0, 0, 0);
     -webkit-box-shadow: 0 0 8px rgb(0, 0, 0);
-    box-shadow: 0 0 8px rgb(0, 0, 0);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.479);
 }
 header.dark{
+    box-shadow: 0 0 8px rgb(0, 0, 0);
     background: #1d1f25;
 }
 header .header-logo{
@@ -79,6 +85,7 @@ header .header-search{
     height: 40px;
     justify-content: center;
     animation: 1.5s ease-out 0s 1 slideInLeft;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.479);
 }
 header .header-search input {
     position: absolute;
@@ -113,7 +120,7 @@ header .header-search .fa-search{
 }
 
 .banner {
-    background:#e7b235;
+    background: transparent;
     padding: 200px 100px 100px;
     min-height: 100vh;
     display: flex;
@@ -124,7 +131,7 @@ header .header-search .fa-search{
 }
 
 .banner.dark{
-    background: #292C35;
+    background: transparent;
 }
 .banner .content{
     animation: 1s ease-out 0s 1 slideInLeft;
@@ -242,16 +249,6 @@ header .header-search .fa-search{
     .suggestionsBox {
         width: 100%;
     }
-}
-
-path{
-    fill: #e7b235;
-    transition: 0.2s linear;
-    filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.123));
-    
-}
-path.dark{
-    fill: #292C35;
 }
   .scrollup {
     font-size: 50px;
