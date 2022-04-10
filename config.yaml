@@ -1,7 +1,7 @@
-mysql_host: '34.116.255.40'
+mysql_host: 'localhost'
 mysql_user: 'rvyk'
-mysql_password: 'skala234'
+mysql_password: 'password'
 mysql_cursorclass: 'DictCursor' #do not change
 
-rcon_ip: '34.116.255.40'
-rcon_password: 'skala234'
+rcon_ip: 'localhost'
+rcon_password: 'password'
