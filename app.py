@@ -6,7 +6,7 @@ from mcrcon import MCRcon
 import datetime
 import yaml
 app = Flask(__name__)
-app.secret_key = "!d\_U1<;+*vR@S;pMN0u"
+app.secret_key = "twoj_secret_key"
 app.register_blueprint(errors)
 cfg = yaml.load(open('config.yaml'))
 app.config['MYSQL_HOST'] = cfg['mysql_host']
